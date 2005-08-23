@@ -1,0 +1,61 @@
+#!/bin/sh
+# sshstart - Start SSHD and set a password (if necessary)
+# (C) Klaus Knopper Jun 2001
+# changed for standard ssh start scripts (for KANOTIX)
+# Joerg Schirottke Jan 2004
+
+PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin"
+export PATH
+
+TITLE="SSH Server"
+
+# LANG et al.
+[ -f /etc/sysconfig/i18n ] && . /etc/sysconfig/i18n
+
+RXVT=""
+[ -n "$DISPLAY" ] && RXVT="rxvt -bg black -fg green -cr red -e"
+#[ "`id -u`" != "0" ] && $RXVT sudo "$0" "$@"
+
+# for non-root, try to reexec with sudo, warn otherwise
+if [ "`id -u`" != "0" ]; then
+ if which sudo >/dev/null; then
+  exec $RXVT sudo "$0" "$@"  || exit 1
+ else
+  echo $"Please become root before running pppoeconf!"
+  echo $"Press return to continue..."
+  read
+  exit 1
+ fi
+fi 
+
+# use keygen if needed
+
+[ -e /etc/ssh/ssh_host_rsa_key ] || ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N ''
+[ -e /etc/ssh/ssh_host_dsa_key ] || ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -C '' -N ''
+
+[ -x /etc/init.d/ssh ] && /etc/init.d/ssh start
+
+case "$LANGUAGE" in
+	de*) MESSAGE="Passwort für Benutzer 'knoppix' setzen"; ;;
+	es)  MESSAGE="Seleccione la clave para el usuario 'knoppix'"; ;;
+	*)   MESSAGE="Set password for user 'knoppix'"; ;;
+esac
+
+echo ""
+
+while grep -q '^knoppix:\*:' /etc/shadow; do
+echo "$MESSAGE"
+passwd knoppix
+done
+
+case "$LANGUAGE" in
+	de*) MESSAGE="Weiter mit der Eingabetaste."; ;;
+	es)  MESSAGE="Pulse Enter para continuar."; ;;
+	*)   MESSAGE="Hit Return to continue."; ;;
+esac
+
+echo ""
+echo -n "$MESSAGE"
+read a
+exit 0
+
