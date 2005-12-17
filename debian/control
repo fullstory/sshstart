@@ -2,13 +2,11 @@ Source: sshstart-kanotix
 Section: net
 Priority: optional
 Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
-Build-Depends-Indep: cdbs (>= 0.4.23-1.1), build-essential, debhelper (>= 4.1.0)
+Build-Depends-Indep: cdbs (>= 0.4.23-1.1), debhelper (>= 5.0.0)
 Standards-Version: 3.6.2
 
 Package: sshstart-kanotix
 Architecture: all
-Provides: sshstart-knoppix
-Conflicts: sshstart-knoppix
 Depends: ssh
 Suggests: rxvt, kanotix-su
 Description: set ssh passwords

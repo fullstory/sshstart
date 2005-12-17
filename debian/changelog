@@ -1,8 +1,16 @@
+sshstart-kanotix (0.5.5) unstable; urgency=low
+
+  * remove cdbs auto-update feature.
+  * remove knoppix virtual packages.
+  * bump compat level to 5.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 17 Dec 2005 03:27:30 +0100
+
 sshstart-kanotix (0.5.4) unstable; urgency=low
 
   * packaging overhaul.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 23 Aug 2005 18:59:22 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 17 Dec 2005 03:27:26 +0100
 
 sshstart-kanotix (0.5.3) unstable; urgency=low
 
