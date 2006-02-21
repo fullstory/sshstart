@@ -3,6 +3,11 @@
 # (C) Klaus Knopper Jun 2001
 # changed for standard ssh start scripts (for KANOTIX)
 # Joerg Schirottke Jan 2004
+# 2006-02    Stefan Lippers-Hollmann <s.l-h@gmx.de>
+
+# override tool behaviour through distro-defaults
+FLL_LIVE_USER="knoppix"
+[ -r /etc/default/distro ] && source /etc/default/distro
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin"
 export PATH
@@ -36,16 +41,16 @@ fi
 [ -x /etc/init.d/ssh ] && /etc/init.d/ssh start
 
 case "$LANGUAGE" in
-	de*) MESSAGE="Passwort für Benutzer 'knoppix' setzen"; ;;
-	es)  MESSAGE="Seleccione la clave para el usuario 'knoppix'"; ;;
-	*)   MESSAGE="Set password for user 'knoppix'"; ;;
+	de*) MESSAGE="Passwort für Benutzer '$FLL_LIVE_USER' setzen"; ;;
+	es)  MESSAGE="Seleccione la clave para el usuario '$FLL_LIVE_USER'"; ;;
+	*)   MESSAGE="Set password for user '$FLL_LIVE_USER'"; ;;
 esac
 
 echo ""
 
-while grep -q '^knoppix:\*:' /etc/shadow; do
+while grep -q '^$FLL_LIVE_USER:\*:' /etc/shadow; do
 echo "$MESSAGE"
-passwd knoppix
+passwd "$FLL_LIVE_USER"
 done
 
 case "$LANGUAGE" in
