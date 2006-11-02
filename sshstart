@@ -9,13 +9,10 @@
 FLL_LIVE_USER="knoppix"
 [ -r /etc/default/distro ] && source /etc/default/distro
 
-PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin"
+PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 export PATH
 
 TITLE="SSH Server"
-
-# LANG et al.
-[ -f /etc/sysconfig/i18n ] && . /etc/sysconfig/i18n
 
 RXVT=""
 [ -n "$DISPLAY" ] && RXVT="rxvt -bg black -fg green -cr red -e"
@@ -23,14 +20,14 @@ RXVT=""
 
 # for non-root, try to reexec with sudo, warn otherwise
 if [ "`id -u`" != "0" ]; then
- if which sudo >/dev/null; then
-  exec $RXVT sudo "$0" "$@"  || exit 1
- else
-  echo $"Please become root before running pppoeconf!"
-  echo $"Press return to continue..."
-  read
-  exit 1
- fi
+	if which sudo >/dev/null; then
+		exec $RXVT kanotix-su "$0" "$@"  || exit 1
+	else
+		echo $"Please become root before running sshstart!"
+		echo $"Press return to continue..."
+		read
+		exit 1
+	fi
 fi 
 
 # use keygen if needed
@@ -40,27 +37,40 @@ fi
 
 [ -x /etc/init.d/ssh ] && /etc/init.d/ssh start
 
-case "$LANGUAGE" in
-	de*) MESSAGE="Passwort für Benutzer '$FLL_LIVE_USER' setzen"; ;;
-	es)  MESSAGE="Seleccione la clave para el usuario '$FLL_LIVE_USER'"; ;;
-	*)   MESSAGE="Set password for user '$FLL_LIVE_USER'"; ;;
+case "$LANG" in
+	de*)
+		MESSAGE="Passwort für Benutzer '$FLL_LIVE_USER' setzen"
+		;;
+	es*)
+		MESSAGE="Seleccione la clave para el usuario '$FLL_LIVE_USER'"
+		;;
+	*)
+		MESSAGE="Set password for user '$FLL_LIVE_USER'"
+		;;
 esac
 
 echo ""
 
 while grep -q '^$FLL_LIVE_USER:\*:' /etc/shadow; do
-echo "$MESSAGE"
-passwd "$FLL_LIVE_USER"
+	echo "$MESSAGE"
+	passwd "$FLL_LIVE_USER"
 done
 
-case "$LANGUAGE" in
-	de*) MESSAGE="Weiter mit der Eingabetaste."; ;;
-	es)  MESSAGE="Pulse Enter para continuar."; ;;
-	*)   MESSAGE="Hit Return to continue."; ;;
+case "$LANG" in
+	de*)
+		MESSAGE="Weiter mit der Eingabetaste."
+		;;
+	es*)
+		MESSAGE="Pulse Enter para continuar."
+		;;
+	*)
+		MESSAGE="Hit Return to continue."
+		;;
 esac
 
 echo ""
 echo -n "$MESSAGE"
 read a
+
 exit 0
 

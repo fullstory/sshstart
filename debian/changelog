@@ -1,8 +1,10 @@
-sshstart-kanotix (0.5.8) UNRELEASED; urgency=low
+sshstart-kanotix (0.5.8) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * don't add /usr/X11R6/bin/ to search path.
+  * get rid of /etc/sysconfig/ dependency.
+  * fix naming confusion.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  2 Nov 2006 14:20:49 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  2 Nov 2006 22:24:05 +0100
 
 sshstart-kanotix (0.5.7) unstable; urgency=low
 
