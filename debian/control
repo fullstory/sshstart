@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 
 Package: sshstart-kanotix
 Architecture: all
-Depends: ssh
-Suggests: rxvt, kanotix-su
+Depends: ssh, kanotix-su
+Suggests: rxvt
 Description: set ssh passwords
  Starts SSH and sets a password for the kanotix user
