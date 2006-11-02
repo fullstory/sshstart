@@ -1,3 +1,9 @@
+sshstart-kanotix (0.5.9) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  2 Nov 2006 22:25:37 +0100
+
 sshstart-kanotix (0.5.8) unstable; urgency=low
 
   * don't add /usr/X11R6/bin/ to search path.
