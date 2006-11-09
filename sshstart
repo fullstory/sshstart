@@ -3,7 +3,7 @@
 # (C) Klaus Knopper Jun 2001
 # changed for standard ssh start scripts (for KANOTIX)
 # Joerg Schirottke Jan 2004
-# 2006-02    Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# (C) 2004-2006 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 # override tool behaviour through distro-defaults
 FLL_LIVE_USER="knoppix"
@@ -16,22 +16,10 @@ TITLE="SSH Server"
 
 RXVT=""
 [ -n "$DISPLAY" ] && RXVT="rxvt -bg black -fg green -cr red -e"
-#[ "`id -u`" != "0" ] && $RXVT sudo "$0" "$@"
 
-# for non-root, try to reexec with sudo, warn otherwise
-if [ "`id -u`" != "0" ]; then
-	if which sudo >/dev/null; then
-		exec $RXVT kanotix-su "$0" "$@"  || exit 1
-	else
-		echo $"Please become root before running sshstart!"
-		echo $"Press return to continue..."
-		read
-		exit 1
-	fi
-fi 
+[ "`id -u`" != "0" ] && exec $RXVT kanotix-su "$0" "$@"
 
 # use keygen if needed
-
 [ -e /etc/ssh/ssh_host_rsa_key ] || ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N ''
 [ -e /etc/ssh/ssh_host_dsa_key ] || ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -C '' -N ''
 
