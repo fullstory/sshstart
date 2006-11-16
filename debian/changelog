@@ -1,8 +1,9 @@
-sshstart-kanotix (0.5.11) UNRELEASED; urgency=low
+sshstart-kanotix (0.5.11) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * use generic x-terminal-emulator support instead of harcoded application,
+    thanks to x-un-i.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  9 Nov 2006 23:39:43 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 16 Nov 2006 23:01:56 +0100
 
 sshstart-kanotix (0.5.10) unstable; urgency=low
 

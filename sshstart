@@ -15,7 +15,7 @@ export PATH
 TITLE="SSH Server"
 
 RXVT=""
-[ -n "$DISPLAY" ] && RXVT="rxvt -bg black -fg green -cr red -e"
+[ -n "$DISPLAY" ] && RXVT="x-terminal-emulator -e"
 
 [ "`id -u`" != "0" ] && exec $RXVT kanotix-su "$0" "$@"
 

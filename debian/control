@@ -8,6 +8,6 @@ Standards-Version: 3.7.2
 Package: sshstart-kanotix
 Architecture: all
 Depends: ssh, kanotix-su
-Suggests: rxvt
+Suggests: xterm | x-terminal-emulator
 Description: set ssh passwords
  Starts SSH and sets a password for the kanotix user
