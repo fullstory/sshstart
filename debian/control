@@ -1,13 +1,14 @@
-Source: sshstart-kanotix
+Source: sshstart-sidux
 Section: net
 Priority: optional
 Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Build-Depends: cdbs (>= 0.4.23-1.1), debhelper (>= 5.0.0)
 Standards-Version: 3.7.2
 
-Package: sshstart-kanotix
+Package: sshstart-sidux
 Architecture: all
-Depends: ssh, kanotix-su
+Depends: ssh, su-me
+Conflicts: sshstart-kanotix
 Suggests: xterm | x-terminal-emulator
 Description: set ssh passwords
- Starts SSH and sets a password for the kanotix user
+ Starts SSH and sets a password for the live user

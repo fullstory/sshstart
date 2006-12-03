@@ -17,7 +17,7 @@ TITLE="SSH Server"
 RXVT=""
 [ -n "$DISPLAY" ] && RXVT="x-terminal-emulator -e"
 
-[ "`id -u`" != "0" ] && exec $RXVT kanotix-su "$0" "$@"
+[ "`id -u`" != "0" ] && exec $RXVT su-me "$0" "$@"
 
 # use keygen if needed
 [ -e /etc/ssh/ssh_host_rsa_key ] || ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N ''
