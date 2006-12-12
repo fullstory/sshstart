@@ -2,7 +2,7 @@
 Comment[de]=SSH Server starten (Remote-Zugang)
 Comment[es]=Arrancar servidor SSH (Acceso remoto)
 Comment=Start SSH Server (Remote access)
-Exec=kanotix-su /usr/sbin/sshstart
+Exec=su-me /usr/sbin/sshstart
 Icon=sshstart
 Name[de]=SSH Server starten
 Name[es]=Arrancar servidor SSH

@@ -2,7 +2,9 @@ sshstart-sidux (0.5.13) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue,  5 Dec 2006 14:31:27 +0100
+  * fixed desktop entry to use su-me
+
+ -- Joaquim Boura <x-un-i@sidux.com>  Tue, 12 Dec 2006 13:05:55 +0100
 
 sshstart-sidux (0.5.12) unstable; urgency=low
 
