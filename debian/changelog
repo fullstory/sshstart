@@ -1,6 +1,4 @@
-sshstart-sidux (0.5.13) UNRELEASED; urgency=low
-
-  * NOT RELEASED YET
+sshstart-sidux (0.5.13) unstable; urgency=low
 
   * fixed desktop entry to use su-me
 
