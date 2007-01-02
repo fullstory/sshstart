@@ -6,7 +6,7 @@
 # (C) 2004-2006 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 # override tool behaviour through distro-defaults
-FLL_LIVE_USER="knoppix"
+FLL_LIVE_USER="sidux"
 [ -r /etc/default/distro ] && source /etc/default/distro
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
