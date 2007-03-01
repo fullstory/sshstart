@@ -1,3 +1,9 @@
+sshstart-sidux (0.5.16) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  1 Mar 2007 19:30:54 +0100
+
 sshstart-sidux (0.5.15) unstable; urgency=low
 
   * sshstart-kanotix was never part of sidux or debian, don't conflict with
