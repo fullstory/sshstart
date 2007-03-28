@@ -1,10 +1,13 @@
 [Desktop Entry]
-Comment[de]=SSH Server starten (Remote-Zugang)
-Comment[es]=Arrancar servidor SSH (Acceso remoto)
-Comment=Start SSH Server (Remote access)
+Encoding=UTF-8
+Type=Application
 Exec=su-me /usr/sbin/sshstart
 Icon=sshstart
-Name[de]=SSH Server starten
-Name[es]=Arrancar servidor SSH
 Name=Start SSH Server
-Type=Application
+Comment=Start SSH Server (Remote access)
+Name[de]=SSH Server starten
+Comment[de]=SSH Server starten (Remote-Zugang)
+Name[es]=Arrancar servidor SSH
+Comment[es]=Arrancar servidor SSH (Acceso remoto)
+
+Categories=sidux;Services

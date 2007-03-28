@@ -1,3 +1,3 @@
-*.desktop usr/share/applnk/sidux/Services
+*.desktop usr/share/applications
 sshstart usr/sbin
 icons usr/share/
