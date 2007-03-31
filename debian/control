@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 
 Package: sshstart-sidux
 Architecture: all
-Depends: ssh, su-me
+Depends: ssh, su-me, sidux-xdg
 Suggests: xterm | x-terminal-emulator
 Description: set ssh passwords
  Starts SSH and sets a password for the live user

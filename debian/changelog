@@ -1,12 +1,13 @@
-sshstart-sidux (0.5.16) UNRELEASED; urgency=low
-
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
+sshstart-sidux (0.5.16) unstable; urgency=low
 
   [ Joaquim Boura ]
   * moving to xdg-menus
 
- -- Joaquim Boura <x-un-i@sidux.com>  Wed, 28 Mar 2007 22:40:13 +0200
+  [ Stefan Lippers-Hollmann ]
+  * fix *.desktop location.
+  * depend on sidux-xdg.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 31 Mar 2007 04:48:01 +0200
 
 sshstart-sidux (0.5.15) unstable; urgency=low
 
