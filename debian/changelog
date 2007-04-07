@@ -1,8 +1,12 @@
 sshstart-sidux (0.5.17) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 31 Mar 2007 04:49:10 +0200
+  [ Joaquim Boura ]
+  * set new icon
+
+ -- Joaquim Boura <x-un-i@sidux.com>  Sat, 07 Apr 2007 15:07:38 +0200
 
 sshstart-sidux (0.5.16) unstable; urgency=low
 
