@@ -5,7 +5,6 @@ It was downloaded from http://www.knopper.net/knoppix/
 
 Upstream Author:    Klaus Knopper <knoppix@knopper.net>
                     Jörg Schirottke <master@kanotix.com>
-		    sshstart*.png is part of the KDE/ kdelibs-data (crystal)
-		    icon set, appropriate license applies (GPL).
+		    icons: (C) 2007 cathbard <cathbard@gmail.com>
 
 Copyright: GPL, see /usr/share/common-licenses
