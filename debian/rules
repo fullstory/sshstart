@@ -1,3 +1,10 @@
 #!/usr/bin/make -f
 
 include /usr/share/cdbs/1/rules/debhelper.mk
+
+install/sshstart-sidux::
+	mkdir -p debian/sshstart-sidux/usr/share/pixmaps
+	convert icons/hicolor/32x32/apps/sidux-ssh.png \
+		debian/sshstart-sidux/usr/share/pixmaps/sshstart-sidux.xpm
+	convert icons/hicolor/16x16/apps/sidux-ssh.png \
+		debian/sshstart-sidux/usr/share/pixmaps/sshstart-sidux-16.xpm

@@ -1,0 +1,7 @@
+?package(sshstart-sidux):needs="text" \
+	section="Apps/System" \
+	hints="sidux,Config" \
+	title="Start SSH Server" \
+	icon32x32="/usr/share/pixmaps/sshstart-sidux.xpm" \
+	icon16x16="/usr/share/pixmaps/sshstart-sidux-16.xpm" \
+	command="su-to-root -c /usr/sbin/sshstart"
