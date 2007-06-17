@@ -1,4 +1,4 @@
-sshstart-sidux (0.5.19) UNRELEASED; urgency=low
+sshstart-sidux (0.5.19) unstable; urgency=low
 
   * Add debian menu entry. Build-Depend on imagemagick.
 
