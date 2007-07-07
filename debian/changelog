@@ -8,8 +8,9 @@ sshstart-sidux (0.5.20) UNRELEASED; urgency=low
   * Use invoke-rc.d.
   * Allow interpolation of $FLL_LIVE_USER variable in grep of /etc/shadow.
   * Depend on procps.
+  * Drop su-me from desktop file.
 
- -- Kel Modderman <kel@otaku42.de>  Sat, 07 Jul 2007 15:11:57 +1000
+ -- Kel Modderman <kel@otaku42.de>  Sat, 07 Jul 2007 15:29:52 +1000
 
 sshstart-sidux (0.5.19) unstable; urgency=low
 
