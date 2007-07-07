@@ -4,61 +4,55 @@
 # changed for standard ssh start scripts (for KANOTIX)
 # Joerg Schirottke Jan 2004
 # (C) 2004-2006 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# (C) 2007  Kel Modderman <kel@otaku42.de>
 
 # override tool behaviour through distro-defaults
 FLL_LIVE_USER="sidux"
-[ -r /etc/default/distro ] && source /etc/default/distro
+if [ -s /etc/default/distro ]; then
+	. /etc/default/distro
+fi
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 export PATH
 
-TITLE="SSH Server"
+[ "$(id -u)" -eq 0 ] || exec su-me "$0" "$@"
 
-RXVT=""
-[ -n "$DISPLAY" ] && RXVT="x-terminal-emulator -e"
+if [ ! -x /etc/init.d/ssh ]; then
+	echo "openssh-server is not installed, aborting."
+	exit 1
+fi
 
-[ "`id -u`" != "0" ] && exec $RXVT su-me "$0" "$@"
+if pgrep -x sshd >/dev/null; then
+	echo "openssh-server is already running, aborting."
+	exit 2
+fi
 
 # use keygen if needed
-[ -e /etc/ssh/ssh_host_rsa_key ] || ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N ''
-[ -e /etc/ssh/ssh_host_dsa_key ] || ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -C '' -N ''
+if [ ! -e /etc/ssh/ssh_host_rsa_key ]; then
+	echo "Generating RSA key..."
+	ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N ''
+fi
 
-[ -x /etc/init.d/ssh ] && /etc/init.d/ssh start
+if [ ! -e /etc/ssh/ssh_host_dsa_key ]; then
+	echo "Generating DSA key..."
+	ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -C '' -N ''
+fi
 
-case "$LANG" in
-	de*)
-		MESSAGE="Passwort für Benutzer '$FLL_LIVE_USER' setzen"
-		;;
-	es*)
-		MESSAGE="Seleccione la clave para el usuario '$FLL_LIVE_USER'"
-		;;
-	*)
-		MESSAGE="Set password for user '$FLL_LIVE_USER'"
-		;;
-esac
+invoke-rc.d ssh start
 
-echo ""
+if [ "$?" -ne 0 ]; then
+	echo "openssh-server failed to start, aborting."
+	exit 3
+fi
 
-while grep -q '^$FLL_LIVE_USER:\*:' /etc/shadow; do
-	echo "$MESSAGE"
+until ! grep -q "^$FLL_LIVE_USER:\*:" /etc/shadow; do
+	echo ""
+	echo "Set password for user '$FLL_LIVE_USER'"
 	passwd "$FLL_LIVE_USER"
 done
 
-case "$LANG" in
-	de*)
-		MESSAGE="Weiter mit der Eingabetaste."
-		;;
-	es*)
-		MESSAGE="Pulse Enter para continuar."
-		;;
-	*)
-		MESSAGE="Hit Return to continue."
-		;;
-esac
-
 echo ""
-echo -n "$MESSAGE"
+echo -n "Finished. Press Enter to exit."
 read a
 
 exit 0
-
