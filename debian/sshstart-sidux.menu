@@ -1,6 +1,6 @@
 ?package(sshstart-sidux): \
 	needs="X11" \
-	section="Apps/System" \
+	section="Applications/System/Administration" \
 	hints="sidux,Config" \
 	title="Start SSH Server" \
 	icon32x32="/usr/share/pixmaps/sshstart-sidux.xpm" \

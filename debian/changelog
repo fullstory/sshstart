@@ -3,8 +3,9 @@ sshstart-sidux (0.5.21) UNRELEASED; urgency=low
   * NOT RELEASED YET
   * add VCS control headers.
   * update syntax for Vcs headers in debian/control
+  * Update debian menu section as per new subpolicy.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 07 Oct 2007 14:51:50 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 25 Oct 2007 22:12:04 +1000
 
 sshstart-sidux (0.5.20) unstable; urgency=low
 
