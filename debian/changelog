@@ -1,6 +1,5 @@
-sshstart-sidux (0.5.22) UNRELEASED; urgency=low
+sshstart-sidux (0.5.22) unstable; urgency=low
 
-  * NOT RELEASED YET
   * ssh has become an obsolete transitional meta package, depend on
     openssh-server.
 
