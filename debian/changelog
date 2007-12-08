@@ -1,6 +1,5 @@
-sshstart-sidux (0.5.23) UNRELEASED; urgency=low
+sshstart-sidux (0.5.23) unstable; urgency=low
 
-  * NOT RELEASED YET
   * update to Standards-Version 3.7.3, no changes necessary.
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 03 Dec 2007 15:04:54 +0100
