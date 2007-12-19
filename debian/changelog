@@ -1,9 +1,5 @@
-sshstart-sidux (0.5.24) UNRELEASED; urgency=low
+sshstart-sidux (0.5.24) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Joaquim Boura ]
   * Translation thanks to RoEn
 
  -- Joaquim Boura <x-un-i@sidux.com>  Tue, 18 Dec 2007 13:25:20 +0100
