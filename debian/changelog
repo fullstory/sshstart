@@ -1,4 +1,4 @@
-sshstart-sidux (0.5.25) unstable; urgency=low
+sshstart-sidux (0.6.0) unstable; urgency=low
 
   * switch from custom su-me to generic su-to-root, adapt dependencies and
     menu files accordingly.
