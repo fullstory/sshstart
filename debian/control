@@ -9,7 +9,8 @@ Vcs-Browser: http://svn.berlios.de/wsvn/fullstory/sshstart-sidux/trunk/
 
 Package: sshstart-sidux
 Architecture: all
-Depends: openssh-server, su-me, sidux-xdg, procps
+Depends: openssh-server, procps
+Recommends: menu
 Suggests: xterm | x-terminal-emulator
 Description: set ssh passwords
- Starts SSH and sets a password for the live user
+ Generates ssh host keys and starts SSH and sets a password for the live user.

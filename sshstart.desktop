@@ -1,7 +1,8 @@
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-Exec=x-terminal-emulator -e /usr/sbin/sshstart
+Exec=su-to-root -c /usr/sbin/sshstart
+Terminal=yes
 Icon=sidux-ssh
 Comment=Start SSH Server (Remote access)
 Comment[de]=SSH Server starten (Remote-Zugang)
@@ -14,4 +15,4 @@ Name[de]=SSH Server starten
 Name[ru]=Запуск сервера SSH
 Name[es]=Arrancar servidor SSH
 
-Categories=sidux;Services
+Categories=Network;
