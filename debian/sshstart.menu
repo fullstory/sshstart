@@ -1,4 +1,4 @@
-?package(sshstart-sidux): \
+?package(sshstart): \
 	needs="text" \
 	section="Applications/System/Administration" \
 	hints="sidux,Config" \
