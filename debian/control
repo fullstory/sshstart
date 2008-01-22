@@ -1,16 +1,25 @@
-Source: sshstart-sidux
+Source: sshstart
 Section: net
 Priority: optional
 Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
-Build-Depends: cdbs, debhelper (>= 6), imagemagick
+Build-Depends: cdbs, debhelper (>= 6)
 Standards-Version: 3.7.3
 Vcs-Svn: svn://svn.berlios.de/fullstory/sshstart-sidux/trunk
 Vcs-Browser: http://svn.berlios.de/wsvn/fullstory/sshstart-sidux/trunk/
 
-Package: sshstart-sidux
+Package: sshstart
 Architecture: all
 Depends: openssh-server, procps
 Recommends: menu
 Suggests: xterm | x-terminal-emulator
 Description: set ssh passwords
  Generates ssh host keys and starts SSH and sets a password for the live user.
+
+Package: sshstart-sidux
+Architecture: all
+Depends: sshstart
+Description: set ssh passwords (transitional dummy package)
+ Generates ssh host keys and starts SSH and sets a password for the live user.
+ .
+ sshstart-sidux has been renamed (back) to sshstart, the remaining
+ transitional dummy package can be safely removed.

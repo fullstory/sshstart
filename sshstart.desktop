@@ -2,17 +2,13 @@
 Encoding=UTF-8
 Type=Application
 Exec=su-to-root -c /usr/sbin/sshstart
+Icon=sshstart
 Terminal=yes
-Icon=sidux-ssh
-Comment=Start SSH Server (Remote access)
-Comment[de]=SSH Server starten (Remote-Zugang)
-Comment[ru]=Запуск сервера SSH (дистан. доступ)
-Comment[es]=Arrancar servidor SSH (Acceso remoto)
-Comment[pt]=Lançar servidor SSH (Acceso remoto)
-Comment[pt_BR]=Lançar servidor SSH (Acceso remoto)
-Name=Start SSH Server
-Name[de]=SSH Server starten
-Name[ru]=Запуск сервера SSH
-Name[es]=Arrancar servidor SSH
-
+Name=sshstart
+GenericName=Start SSH Server (Remote access)
+GenericName[de]=SSH Server starten (Remote-Zugang)
+GenericName[ru]=Запуск сервера SSH (дистан. доступ)
+GenericName[es]=Arrancar servidor SSH (Acceso remoto)
+GenericName[pt]=Lançar servidor SSH (Acceso remoto)
+GenericName[pt_BR]=Lançar servidor SSH (Acceso remoto)
 Categories=Network;
