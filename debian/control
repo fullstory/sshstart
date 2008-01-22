@@ -12,6 +12,8 @@ Architecture: all
 Depends: openssh-server, procps
 Recommends: menu
 Suggests: xterm | x-terminal-emulator
+Provides: sshstart-sidux
+Replaces: sshstart-sidux
 Description: set ssh passwords
  Generates ssh host keys and starts SSH and sets a password for the live user.
 
