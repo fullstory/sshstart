@@ -1,4 +1,4 @@
-sshstart-sidux (0.6.2) unstable; urgency=low
+sshstart (0.6.2) unstable; urgency=low
 
   * remove artwork.
   * rework debian/copyright to be machine readable.
@@ -6,8 +6,9 @@ sshstart-sidux (0.6.2) unstable; urgency=low
   * add create-icons target in debian/rules.
   * create icons.
   * clean up XDG desktop file.
+  * fix install target.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 22 Jan 2008 15:15:18 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 22 Jan 2008 15:46:27 +0100
 
 sshstart-sidux (0.6.1) unstable; urgency=low
 
