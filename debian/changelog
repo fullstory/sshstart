@@ -1,3 +1,9 @@
+sshstart (0.6.8) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 07 May 2008 02:39:15 +0200
+
 sshstart (0.6.7) unstable; urgency=low
 
   * switch to the new dh implementation of debhelper 7.
