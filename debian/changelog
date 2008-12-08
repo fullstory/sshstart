@@ -1,9 +1,8 @@
-sshstart (0.6.11) UNRELEASED; urgency=low
+sshstart (0.6.11) unstable; urgency=low
 
-  * NOT RELEASED YET
   * make lintian happy and depend on ${misc:Depends}.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 08 Dec 2008 03:06:38 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 08 Dec 2008 23:59:16 +0100
 
 sshstart (0.6.10) unstable; urgency=low
 
