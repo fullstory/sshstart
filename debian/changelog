@@ -1,8 +1,8 @@
-sshstart (0.6.12) UNRELEASED; urgency=low
+sshstart (0.6.12) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * fix desktop-entry-contains-encoding-key.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 09 Dec 2008 00:00:33 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 20 Feb 2009 18:15:14 +0100
 
 sshstart (0.6.11) unstable; urgency=low
 
