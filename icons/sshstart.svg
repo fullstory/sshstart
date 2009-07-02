@@ -23,13 +23,6 @@
    inkscape:export-ydpi="90">
   <defs
      id="defs1309">
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 64 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="128 : 64 : 1"
-       inkscape:persp3d-origin="64 : 42.666667 : 1"
-       id="perspective30561" />
     <linearGradient
        inkscape:collect="always"
        id="linearGradient3779">
@@ -156,18 +149,6 @@
          style="stop-color:white;stop-opacity:0;"
          offset="1"
          id="stop3150" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient3134">
-      <stop
-         style="stop-color:white;stop-opacity:1;"
-         offset="0"
-         id="stop3136" />
-      <stop
-         style="stop-color:white;stop-opacity:0;"
-         offset="1"
-         id="stop3138" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
@@ -384,16 +365,6 @@
        r="63.893538" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient3134"
-       id="linearGradient3872"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.2951856,0,0,1.2951856,-97.588168,5.8864649)"
-       x1="-11.687261"
-       y1="43.783871"
-       x2="66.459869"
-       y2="88.829872" />
-    <linearGradient
-       inkscape:collect="always"
        xlink:href="#linearGradient3092"
        id="linearGradient3875"
        gradientUnits="userSpaceOnUse"
@@ -596,38 +567,6 @@
          style="stop-color:#BBBBBB"
          offset="1" />
     </radialGradient>
-    <radialGradient
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.6667,0,0,0.7574,20.7214,14.064)"
-       r="40.0294"
-       cy="59.1865"
-       cx="53.1978"
-       id="XMLID_8_">
-      <stop
-         id="stop41"
-         style="stop-color:#323232"
-         offset="0" />
-      <stop
-         id="stop43"
-         style="stop-color:#363636"
-         offset="0.2083" />
-      <stop
-         id="stop45"
-         style="stop-color:#434343"
-         offset="0.4278" />
-      <stop
-         id="stop47"
-         style="stop-color:#585858"
-         offset="0.6526" />
-      <stop
-         id="stop49"
-         style="stop-color:#757575"
-         offset="0.8796" />
-      <stop
-         id="stop51"
-         style="stop-color:#888888"
-         offset="1" />
-    </radialGradient>
     <linearGradient
        gradientTransform="translate(559.14286,-264.28571)"
        y2="34"
@@ -661,13 +600,6 @@
          style="stop-color:#666666;stop-opacity:1;"
          id="stop3175" />
     </radialGradient>
-    <inkscape:perspective
-       id="perspective113268"
-       inkscape:persp3d-origin="64 : 42.666667 : 1"
-       inkscape:vp_z="128 : 64 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 64 : 1"
-       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -688,8 +620,8 @@
      inkscape:guide-bbox="true"
      inkscape:window-width="1280"
      inkscape:window-height="737"
-     inkscape:window-x="-5"
-     inkscape:window-y="-3"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      showborder="true"
      inkscape:grid-points="true"
      gridtolerance="10000"
@@ -717,7 +649,7 @@
             <dc:title>Oxygen team</dc:title>
           </cc:Agent>
         </dc:contributor>
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/LGPL/2.1/">
