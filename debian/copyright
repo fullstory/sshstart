@@ -6,13 +6,13 @@ It was downloaded from http://developer.berlios.de/projects/fullstory/
 Files: *
 Copyright: © 2001-2002 Klaus Knopper <knoppix@knopper.net>
            © 2003 Jörg Schirottke <master@kanotix.com>
-           © 2004-2008 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+           © 2004-2010 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 License: GPL-2
   The sshstart program is licensed under the GNU General Public License,
   version 2.
 
 Files: debian/*
-Copyright: © 2005-2008 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Copyright: © 2005-2010 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 License: GPL-2
   The Debian packaging information is licensed under the GNU General
   Public License, version 2.
@@ -67,4 +67,3 @@ version 2, can be found in `/usr/share/common-licenses/GPL-2'.
 
 On Debian systems, the complete text of the GNU Lesser General Public License,
 version 2, can be found in `/usr/share/common-licenses/LGPL-2'.
-

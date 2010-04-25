@@ -1,8 +1,10 @@
-sshstart (0.6.14) UNRELEASED; urgency=low
+sshstart (0.6.14) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * switch to dpkg-source 3.0 (native) format.
+  * bump standards version to 3.8.4, no changes necessary.
+  * update copyright years.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 03 Jul 2009 00:09:21 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 26 Apr 2010 01:41:43 +0200
 
 sshstart (0.6.13) unstable; urgency=low
 

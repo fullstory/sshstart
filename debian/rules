@@ -27,4 +27,3 @@ create-icons:
 	mkdir -p icons/pixmaps
 	convert icons/hicolor/32x32/apps/sshstart.png icons/pixmaps/sshstart.xpm
 	convert icons/hicolor/16x16/apps/sshstart.png icons/pixmaps/sshstart-16.xpm
-
