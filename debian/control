@@ -3,7 +3,7 @@ Section: net
 Priority: optional
 Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Build-Depends: debhelper (>= 7)
-Standards-Version: 3.8.4
+Standards-Version: 3.9.0
 Vcs-Svn: svn://svn.berlios.de/fullstory/sshstart-sidux/trunk
 Vcs-Browser: http://svn.berlios.de/wsvn/fullstory/sshstart-sidux/trunk/
 
@@ -15,4 +15,8 @@ Depends: ${misc:Depends},
 Recommends: menu
 Suggests: xterm | x-terminal-emulator
 Description: set ssh passwords
- Generates ssh host keys and starts SSH and sets a password for the live user.
+ Generates ssh2 host keys and starts the installed Secure Shell (SSH) Server
+ (OpenSSH). Additionally a password needs to be set for the live user, root
+ passwords need to be set manually.
+ .
+ This is a live-only package.
