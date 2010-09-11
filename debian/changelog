@@ -1,3 +1,9 @@
+sshstart (0.6.19) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 08 Aug 2010 05:29:23 +0200
+
 sshstart (0.6.18) unstable; urgency=low
 
   * switch to compat level 8.
