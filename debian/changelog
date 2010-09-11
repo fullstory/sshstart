@@ -1,8 +1,8 @@
-sshstart (0.6.17) UNRELEASED; urgency=low
+sshstart (0.6.17) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * emphasize that this is a live-only package.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 04 Aug 2010 04:42:19 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 05 Aug 2010 17:44:12 +0200
 
 sshstart (0.6.16) unstable; urgency=low
 
@@ -31,7 +31,7 @@ sshstart (0.6.13) unstable; urgency=low
   [ Bernard Gray ]
   * update art for 2009-02
   * convert all bitmaps to new svg art
-  * update copyright for new art 
+  * update copyright for new art
 
   [ Stefan Lippers-Hollmann ]
   * generate binary artwork.
@@ -305,13 +305,13 @@ sshstart-kanotix (0.5.3) unstable; urgency=low
 
 sshstart-kanotix (0.5-2kanotix3) unstable; urgency=low
 
-  * change icons. 
+  * change icons.
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 17 Dec 2004 20:39:58 +0100
 
 sshstart-kanotix (0.5-2kanotix2) unstable; urgency=low
 
-  * remove gnome legacy support. 
+  * remove gnome legacy support.
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 16 Dec 2004 22:51:26 +0100
 

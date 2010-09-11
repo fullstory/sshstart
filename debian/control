@@ -19,4 +19,5 @@ Description: set ssh passwords
  (OpenSSH). Additionally a password needs to be set for the live user, root
  passwords need to be set manually.
  .
- This is a live-only package.
+ This is a FULLSTORY live-only package and must not be installed to an
+ ordinary system.
