@@ -6,7 +6,7 @@
 # (C) 2007 Kel Modderman <kel@otaku42.de>
 
 # override tool behaviour through distro-defaults
-FLL_LIVE_USER="sidux"
+FLL_LIVE_USER="aptosid"
 if [ -s /etc/default/distro ]; then
 	. /etc/default/distro
 fi

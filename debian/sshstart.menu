@@ -1,7 +1,7 @@
 ?package(sshstart): \
 	needs="text" \
 	section="Applications/System/Administration" \
-	hints="sidux,Config" \
+	hints="aptosid,Config" \
 	title="Start SSH Server" \
 	icon32x32="/usr/share/pixmaps/sshstart.xpm" \
 	icon16x16="/usr/share/pixmaps/sshstart-16.xpm" \
