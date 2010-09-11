@@ -1,3 +1,9 @@
+sshstart (0.6.17) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 04 Aug 2010 04:42:19 +0200
+
 sshstart (0.6.16) unstable; urgency=low
 
   * bump standards version to 3.9.1, no changes necessary.
