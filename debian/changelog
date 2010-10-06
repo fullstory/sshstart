@@ -1,8 +1,8 @@
-sshstart (0.6.21) UNRELEASED; urgency=low
+sshstart (0.6.21) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * fix x-un-i's mail address.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 09 Sep 2010 04:38:35 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 06 Oct 2010 15:12:05 +0200
 
 sshstart (0.6.20) unstable; urgency=low
 
@@ -160,7 +160,7 @@ sshstart-sidux (0.5.24) unstable; urgency=low
 
   * Translation thanks to RoEn
 
- -- Joaquim Boura <x-un-i@sidux.com>  Tue, 18 Dec 2007 13:25:20 +0100
+ -- Joaquim Boura <x-un-i@berlios.de>  Tue, 18 Dec 2007 13:25:20 +0100
 
 sshstart-sidux (0.5.23) unstable; urgency=low
 
@@ -214,7 +214,7 @@ sshstart-sidux (0.5.18) unstable; urgency=low
 
   * new icon sidux-ssh.
 
- -- Joaquim Boura <x-un-i@sidux.com>  Sun, 29 Apr 2007 20:49:44 +0200
+ -- Joaquim Boura <x-un-i@berlios.de>  Sun, 29 Apr 2007 20:49:44 +0200
 
 sshstart-sidux (0.5.17) unstable; urgency=low
 
@@ -254,7 +254,7 @@ sshstart-sidux (0.5.13) unstable; urgency=low
 
   * fixed desktop entry to use su-me
 
- -- Joaquim Boura <x-un-i@sidux.com>  Tue, 12 Dec 2006 13:05:55 +0100
+ -- Joaquim Boura <x-un-i@berlios.de>  Tue, 12 Dec 2006 13:05:55 +0100
 
 sshstart-sidux (0.5.12) unstable; urgency=low
 
