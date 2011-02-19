@@ -2,7 +2,7 @@
 # sshstart - Start SSHD and set a password (if necessary)
 # (C) 2001 Klaus Knopper <knopper@knopper.net>
 # (C) 2004 Joerg Schirottke Jan
-# (C) 2004-2010 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# (C) 2004-2011 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 # (C) 2007 Kel Modderman <kel@otaku42.de>
 
 # override tool behaviour through distro-defaults
@@ -29,13 +29,18 @@ fi
 
 # use keygen if needed
 if [ ! -e /etc/ssh/ssh_host_rsa_key ]; then
-	echo "Generating RSA key..."
+	echo "Generating SSH2 RSA key..."
 	ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N ''
 fi
 
 if [ ! -e /etc/ssh/ssh_host_dsa_key ]; then
-	echo "Generating DSA key..."
+	echo "Generating SSH2 DSA key..."
 	ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -C '' -N ''
+fi
+
+if [ ! -e /etc/ssh/ssh_host_ecdsa_key ]; then
+	echo "Generating SSH2 ECDSA key..."
+	ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -C '' -N ''
 fi
 
 invoke-rc.d ssh start
@@ -56,4 +61,3 @@ echo -n "Finished. Press Enter to exit."
 read DUMMY
 
 exit 0
-

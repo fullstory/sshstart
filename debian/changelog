@@ -1,8 +1,8 @@
-sshstart (0.6.22) UNRELEASED; urgency=low
+sshstart (0.6.22) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * create SSH2 ECDSA key.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 06 Oct 2010 15:12:25 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 19 Feb 2011 03:23:29 +0100
 
 sshstart (0.6.21) unstable; urgency=low
 
