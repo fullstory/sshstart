@@ -1,9 +1,9 @@
 #!/bin/sh
 # sshstart - Start SSHD and set a password (if necessary)
-# (C) 2001 Klaus Knopper <knopper@knopper.net>
-# (C) 2004 Joerg Schirottke Jan
-# (C) 2004-2011 Stefan Lippers-Hollmann <s.l-h@gmx.de>
-# (C) 2007 Kel Modderman <kel@otaku42.de>
+# © 2001 Klaus Knopper <knopper@knopper.net>
+# © 2004 Joerg Schirottke Jan
+# © 2004-2012 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# © 2007 Kel Modderman <kel@otaku42.de>
 
 # override tool behaviour through distro-defaults
 FLL_LIVE_USER="aptosid"
