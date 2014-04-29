@@ -1,8 +1,9 @@
-sshstart (0.6.29) UNRELEASED; urgency=medium
+sshstart (0.7.0) unstable; urgency=medium
 
-  * NOT RELEASED YET
+  * add support for selinux.
+  * generate SSH2 ED25519 keys.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 14 Apr 2014 00:16:20 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 29 Apr 2014 02:43:10 +0200
 
 sshstart (0.6.28) unstable; urgency=low
 

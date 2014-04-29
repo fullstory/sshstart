@@ -31,16 +31,41 @@ fi
 if [ ! -e /etc/ssh/ssh_host_rsa_key ]; then
 	echo "Generating SSH2 RSA key..."
 	ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N ''
+
+	if which restorecon >/dev/null 2>&1; then
+		restorecon	/etc/ssh/ssh_host_rsa_key \
+				/etc/ssh/ssh_host_rsa_key.pub
+	fi
 fi
 
 if [ ! -e /etc/ssh/ssh_host_dsa_key ]; then
 	echo "Generating SSH2 DSA key..."
 	ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -C '' -N ''
+
+	if which restorecon >/dev/null 2>&1; then
+		restorecon	/etc/ssh/ssh_host_dsa_key \
+				/etc/ssh/ssh_host_dsa_key.pub
+	fi
 fi
 
 if [ ! -e /etc/ssh/ssh_host_ecdsa_key ]; then
 	echo "Generating SSH2 ECDSA key..."
 	ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -C '' -N ''
+
+	if which restorecon >/dev/null 2>&1; then
+		restorecon	/etc/ssh/ssh_host_ecdsa_key \
+				/etc/ssh/ssh_host_ecdsa_key.pub
+	fi
+fi
+
+if [ ! -e /etc/ssh/ssh_host_ed25519_key ]; then
+	echo "Generating SSH2 ED25519 key..."
+	ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -C '' -N ''
+
+	if which restorecon >/dev/null 2>&1; then
+		restorecon	/etc/ssh/ssh_host_ed25519_key \
+				/etc/ssh/ssh_host_ed25519_key.pub
+	fi
 fi
 
 invoke-rc.d ssh start
