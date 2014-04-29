@@ -1,3 +1,9 @@
+sshstart (0.7.1) UNRELEASED; urgency=medium
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 29 Apr 2014 02:45:07 +0200
+
 sshstart (0.7.0) unstable; urgency=medium
 
   * add support for selinux.
