@@ -1,10 +1,6 @@
-sshstart (0.7.1) UNRELEASED; urgency=medium
+sshstart (0.7.1) unstable; urgency=medium
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Niall Walsh ]
-  * use service instead of invoke-rc.d so the service is always started
+  * use service instead of invoke-rc.d so the service is always started.
 
  -- Niall Walsh <niallwalsh@celtux.org>  Thu, 28 Aug 2014 02:35:37 +0100
 
