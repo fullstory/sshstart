@@ -68,7 +68,7 @@ if [ ! -e /etc/ssh/ssh_host_ed25519_key ]; then
 	fi
 fi
 
-invoke-rc.d ssh start
+service ssh start
 
 if [ "$?" -ne 0 ]; then
 	echo "openssh-server failed to start, aborting."
