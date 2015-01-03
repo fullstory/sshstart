@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Uploaders: Niall Walsh <niallwalsh@celtux.org>
 Build-Depends: debhelper (>= 9.20120115)
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Vcs-git: git://github.com/fullstory/sshstart.git
 Vcs-Browser: https://github.com/fullstory/sshstart
 
