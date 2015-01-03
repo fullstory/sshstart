@@ -2,8 +2,9 @@ sshstart (0.7.2) unstable; urgency=medium
 
   * bump standards version to 3.9.6, no changes necessary.
   * convert to machine readable copyright.
+  * add license header.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 04 Jan 2015 00:40:02 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 04 Jan 2015 00:42:30 +0100
 
 sshstart (0.7.1) unstable; urgency=medium
 
