@@ -1,9 +1,9 @@
-sshstart (0.7.2) UNRELEASED; urgency=medium
+sshstart (0.7.2) unstable; urgency=medium
 
-  * NOT RELEASED YET
   * bump standards version to 3.9.6, no changes necessary.
+  * convert to machine readable copyright.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 28 Aug 2014 03:49:48 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 04 Jan 2015 00:40:02 +0100
 
 sshstart (0.7.1) unstable; urgency=medium
 
