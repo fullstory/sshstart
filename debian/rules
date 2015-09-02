@@ -1,14 +1,10 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@
+	dh ${@} --parallel
 
 create-icons:
-	# requires inkscape and imagemagick to be installed
-	@if [ ! -x /usr/bin/convert ]; then \
-		echo "ERROR: imagemagick not installed!" ; \
-		false ; \
-	fi
+	# requires inkscape to be installed
 	@if [ ! -x /usr/bin/inkscape ]; then \
 		echo "ERROR: inkscape not installed!" ; \
 		false ; \
@@ -22,8 +18,3 @@ create-icons:
 			 --export-png="$(CURDIR)/icons/hicolor/$${i}x$${i}/apps/sshstart.png" \
 				$(CURDIR)/icons/sshstart.svg ; \
 	done
-	
-	# create XPM icons for the debian menu system
-	mkdir -p icons/pixmaps
-	convert icons/hicolor/32x32/apps/sshstart.png icons/pixmaps/sshstart.xpm
-	convert icons/hicolor/16x16/apps/sshstart.png icons/pixmaps/sshstart-16.xpm
