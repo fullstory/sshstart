@@ -1,10 +1,10 @@
 sshstart (0.7.4) UNRELEASED; urgency=medium
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
   [ Kel Modderman ]
   * Use pkexec to gain root.
+
+  [ Stefan Lippers-Hollmann ]
+  * bump standards version to 4.7.0, no changes necessary.
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 02 Sep 2015 20:04:44 +0200
 
