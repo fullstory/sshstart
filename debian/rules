@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 %:
-	dh ${@} --parallel
+	dh ${@}
 
 create-icons:
 	# requires inkscape to be installed
@@ -15,6 +15,7 @@ create-icons:
 		mkdir -p "icons/hicolor/$${i}x$${i}/apps" ; \
 		inkscape --export-width=$${i} \
 			 --export-height=$${i} \
-			 --export-png="$(CURDIR)/icons/hicolor/$${i}x$${i}/apps/sshstart.png" \
+			 --export-type="png" \
+			 --export-filename="$(CURDIR)/icons/hicolor/$${i}x$${i}/apps/sshstart.png" \
 				$(CURDIR)/icons/sshstart.svg ; \
 	done
