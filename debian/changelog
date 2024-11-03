@@ -11,8 +11,9 @@ sshstart (0.7.4) unstable; urgency=medium
     - source: cute-field Vcs-git vs Vcs-Git
     - source: insecure-copyright-format-uri
     - source: tab-in-license-text
+    - source: silent-on-rules-requiring-root
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 03 Nov 2024 20:11:26 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 03 Nov 2024 20:12:46 +0100
 
 sshstart (0.7.3) unstable; urgency=medium
 
