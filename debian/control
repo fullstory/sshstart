@@ -13,7 +13,7 @@ Architecture: all
 Depends: ${misc:Depends},
  openssh-server,
  procps
-Recommends: menu
+Recommends: pkexec
 Suggests: xterm | x-terminal-emulator
 Description: set ssh passwords
  Generates ssh2 host keys and starts the installed Secure Shell (SSH) Server

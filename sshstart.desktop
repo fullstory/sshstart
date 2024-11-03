@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=su-to-root -c /usr/sbin/sshstart
+Exec=pkexec /usr/sbin/sshstart
 Icon=sshstart
 Terminal=true
 Name=sshstart
