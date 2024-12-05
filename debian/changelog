@@ -1,8 +1,8 @@
-sshstart (0.8.1) UNRELEASED; urgency=medium
+sshstart (0.8.1) unstable; urgency=medium
 
-  * NOT RELEASED YET
+  * move XDG desktop icon from Network to System.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 05 Dec 2024 12:35:20 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 05 Dec 2024 14:35:12 +0100
 
 sshstart (0.8.0) unstable; urgency=medium
 
