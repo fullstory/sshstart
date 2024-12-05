@@ -1,3 +1,9 @@
+sshstart (0.7.6) UNRELEASED; urgency=medium
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 05 Dec 2024 06:29:39 +0100
+
 sshstart (0.7.5) unstable; urgency=medium
 
   * no longer generate DSA hostkeys.
