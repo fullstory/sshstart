@@ -4,8 +4,12 @@ Upstream-Contact: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Source: https://github.com/fullstory/sshstart.git
 
 Files: *
+Copyright: 2004-2024, Stefan Lippers-Hollmann <s.l-h@gmx.de>
+License: GPL-2.0
+
+Files: sshstart
 Copyright: 2001-2002, Klaus Knopper <knoppix@knopper.net>
-           2003, Jörg Schirottke <master@kanotix.com>
+           2004, Jörg Schirottke <master@kanotix.com>
            2004-2024, Stefan Lippers-Hollmann <s.l-h@gmx.de>
 License: GPL-2.0
 

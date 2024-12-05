@@ -2,9 +2,9 @@
 # sshstart - Start SSHD and set a password (if necessary)
 
 # Copyright (C) 2001, Klaus Knopper <knopper@knopper.net>
-# Copyright (C) 2004, Joerg Schirottke Jan
-# Copyright (C) 2004-2014, Stefan Lippers-Hollmann <s.l-h@gmx.de>
-# Copyright (C) 2007, Kel Modderman <kelvmod@gmail.com>
+# Copyright (C) 2004, Joerg Schirottke <master@kanotix.com>
+# Copyright (C) 2004-2024, Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# Copyright (C) 2007-2024, Kel Modderman <kelvmod@gmail.com>
 
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -28,7 +28,7 @@ if [ "$(id -u)" -ne 0 ]; then
 	exit 1
 fi
 
-if [ ! -x /etc/init.d/ssh ]; then
+if [ ! -x /etc/init.d/ssh ] && [ ! -x /usr/lib/systemd/system/ssh.service ]; then
 	echo "openssh-server is not installed, aborting."
 	exit 2
 fi
@@ -38,36 +38,8 @@ if pgrep -x sshd >/dev/null; then
 	exit 3
 fi
 
-# use keygen if needed
-if [ ! -e /etc/ssh/ssh_host_rsa_key ]; then
-	echo "Generating SSH2 RSA key..."
-	ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N ''
-
-	if which restorecon >/dev/null 2>&1; then
-		restorecon	/etc/ssh/ssh_host_rsa_key \
-				/etc/ssh/ssh_host_rsa_key.pub
-	fi
-fi
-
-if [ ! -e /etc/ssh/ssh_host_ecdsa_key ]; then
-	echo "Generating SSH2 ECDSA key..."
-	ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -C '' -N ''
-
-	if which restorecon >/dev/null 2>&1; then
-		restorecon	/etc/ssh/ssh_host_ecdsa_key \
-				/etc/ssh/ssh_host_ecdsa_key.pub
-	fi
-fi
-
-if [ ! -e /etc/ssh/ssh_host_ed25519_key ]; then
-	echo "Generating SSH2 ED25519 key..."
-	ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -C '' -N ''
-
-	if which restorecon >/dev/null 2>&1; then
-		restorecon	/etc/ssh/ssh_host_ed25519_key \
-				/etc/ssh/ssh_host_ed25519_key.pub
-	fi
-fi
+# Rely on openssh-server's postinst to generate host keys
+dpkg-reconfigure --frontend=noninteractive openssh-server
 
 service ssh start
 

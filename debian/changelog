@@ -1,8 +1,10 @@
-sshstart (0.7.6) UNRELEASED; urgency=medium
+sshstart (0.8.0) unstable; urgency=medium
 
-  * NOT RELEASED YET
+  * rely on on openssh-server's postinst to generate hostkeys.
+  * clarify copyright information.
+  * also check for ssh's systemd unit, in addition to the sysv initscript.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 05 Dec 2024 06:29:39 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 05 Dec 2024 12:33:33 +0100
 
 sshstart (0.7.5) unstable; urgency=medium
 
