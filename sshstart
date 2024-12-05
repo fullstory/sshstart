@@ -49,16 +49,6 @@ if [ ! -e /etc/ssh/ssh_host_rsa_key ]; then
 	fi
 fi
 
-if [ ! -e /etc/ssh/ssh_host_dsa_key ]; then
-	echo "Generating SSH2 DSA key..."
-	ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -C '' -N ''
-
-	if which restorecon >/dev/null 2>&1; then
-		restorecon	/etc/ssh/ssh_host_dsa_key \
-				/etc/ssh/ssh_host_dsa_key.pub
-	fi
-fi
-
 if [ ! -e /etc/ssh/ssh_host_ecdsa_key ]; then
 	echo "Generating SSH2 ECDSA key..."
 	ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -C '' -N ''
