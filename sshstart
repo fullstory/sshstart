@@ -38,13 +38,16 @@ if pgrep -x sshd >/dev/null; then
 	exit 3
 fi
 
-# Rely on openssh-server's postinst to generate host keys
-dpkg-reconfigure --frontend=noninteractive openssh-server
+# Rely on openssh-server's postinst to generate host keys.  Drop its stderr:
+# the deb-systemd-invoke step warns that the still-disabled ssh units are
+# "not starting", which is expected here (we start ssh ourselves below) and
+# only confuses the user; the host key output on stdout is kept.
+dpkg-reconfigure --frontend=noninteractive openssh-server 2>/dev/null
 
-service ssh start
-
-if [ "$?" -ne 0 ]; then
-	echo "openssh-server failed to start, aborting."
+# Start the daemon.  systemctl starts the unit even though it is disabled
+# (disabled only affects autostart at boot).
+if ! service ssh start; then
+	echo "openssh-server failed to start, aborting." >&2
 	exit 4
 fi
 
@@ -53,6 +56,26 @@ until ! grep -q "^$FLL_LIVE_USER:\*:" /etc/shadow; do
 	echo "Set password for user '$FLL_LIVE_USER'"
 	passwd "$FLL_LIVE_USER"
 done
+
+# Confirm what is running and how to reach it, so the user is not left
+# guessing whether the server actually came up.
+PORTS="$(/usr/sbin/sshd -T 2>/dev/null | awk 'tolower($1) == "port" { print $2 }' | paste -sd' ' -)"
+[ -n "$PORTS" ] || PORTS=22
+
+echo ""
+if pgrep -x sshd >/dev/null 2>&1; then
+	echo "SSH server is up and listening on port(s): ${PORTS}"
+
+	ADDRS="$(hostname -I 2>/dev/null)"
+	if [ -n "$ADDRS" ]; then
+		echo "Connect to this machine with:"
+		for ADDR in $ADDRS; do
+			echo "    ssh -p ${PORTS%% *} ${FLL_LIVE_USER}@${ADDR}"
+		done
+	fi
+else
+	echo "Warning: sshd does not appear to be running." >&2
+fi
 
 echo ""
 echo -n "Finished. Press Enter to exit."

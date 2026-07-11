@@ -1,6 +1,13 @@
 sshstart (0.8.4) UNRELEASED; urgency=medium
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
+
+  [ Kel Modderman ]
+  * hide the misleading 'not starting' warnings emitted while
+    reconfiguring openssh-server; ssh is started regardless.
+  * on success, report that sshd is up, which port it listens on and how
+    to connect.
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 19 Dec 2024 03:52:35 +0100
 
