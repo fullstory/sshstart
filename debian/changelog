@@ -1,7 +1,4 @@
-sshstart (0.8.4) UNRELEASED; urgency=medium
-
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
+sshstart (0.8.4) unstable; urgency=medium
 
   [ Kel Modderman ]
   * hide the misleading 'not starting' warnings emitted while
